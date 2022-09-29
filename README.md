@@ -14,13 +14,14 @@ Setup SSH Key:
 
 https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
-(If you are using two different accounts, consider one using rsa and the other using ed25519)
+(If you are using two different accounts, consider one using `rsa` and the other using `ed25519` for easy identification)
 
 Different SSH keys on same device:
 
 https://www.freecodecamp.org/news/manage-multiple-github-accounts-the-ssh-way-2dadc30ccaca/
 
-In file: ~/.ssh/config
+In file: `~/.ssh/config`
+
 ```
 Host github.com
   AddKeysToAgent yes
@@ -37,9 +38,9 @@ Host github.com-AltAccount
   IdentityFile ~/.ssh/id_ed25519
 ```
 
-When cloning repos, use `git clone git@github.com:MainAccount/...` for main account and `git clone git@github.com-AltAccount:AltAccount/...` for alt account.
+When cloning repos, use `git clone git@github.com:MainAccount/...` for main account and `git clone git@github.com-AltAccount:AltAccount/...` for alt account, note the extra `-AltAccount` for alt account.
 
-REMEMBER TO CHANGE `git config user.name` and  `git config user.email` also.
+**Remember to change `git config user.name` and  `git config user.email` also when using your alt account.**
 
 ## iterm 2
 https://iterm2.com/
@@ -65,7 +66,6 @@ ZSH_THEME="ys"
 plugins=(
 	git
 	zsh-autosuggestions
-	web-search
 )
 ```
 
@@ -83,8 +83,6 @@ git: Shortcuts for git commands
 `gl`: `git pull`
 
 zsh-autosuggestions: make suggestions according to your recent history, tap right arrow to accept
-
-web-search: use `google (keyword)`
 
 ### Show git username inside git repo (for multiple GitHub accounts)
 run `code $ZSH_CUSTOM`
@@ -142,36 +140,45 @@ https://tldr.sh/ (Useful simplification of the help page of common commands)
 
 ## VS Code Plugins
 
+These are the VS code plugins that I use, you can see if they are useful to you. These are the extension IDs, copy and paste them in the search extensions box to find them.
 ### Generally Useful
 
-sdras.night-owl (Theme)
+sdras.night-owl (A cooler theme)
 
-johnpapa.vscode-peacock (Coloring of the VS code boundaries)
+johnpapa.vscode-peacock (Coloring of the VS code boundaries, to distinguish between different folders, e.g. to distinguish between the frontend and the backend of the project using different colour)
 
 aaron-bond.better-comments (Coloring comments with //!, //TODO, //?)
 
 bierner.markdown-preview-github-styles (Preview of .md files)
 
+yzane.markdown-pdf (convert .md files into .pdf files)
+
 mechatroner.rainbow-csv (Coloring of CSV files)
 
 humao.rest-client (Create a .http file to make API requests)
 
-### Language Specific:
+adpyke.codesnap (Beautiful screenshots, suggest checking codesnap.transparentBackground)
 
-dan-c-underwood.arm (ARM Assembly Code)
+mhutchie.git-graph (View Git history by Git Graph: view Git Graph (git log))
 
-Dart-Code.dart-code (Dart (used with Flutter))
+eamodio.gitlens (View more details about Git, e.g. when and who last edited a section of the code, sometimes useful sometimes a bit annoying)
 
-Dart-Code.flutter (Flutter)
+### Language Specific
 
-DigitalBrainstem.javascript-ejs-support (Javascript EJS)
+dan-c-underwood.arm (ARM Assembly Code, syntax highlighting)
 
-golang.go (Go)
+Dart-Code.dart-code (Dart (used with Flutter), syntax highlighting, auto suggestions and more)
 
-justusadam.language-haskell (Haskell)
+Dart-Code.flutter (Flutter, syntax highlighting, auto suggestions and more)
 
-ms-python.python (Python)
+DigitalBrainstem.javascript-ejs-support (Javascript EJS, syntax highlighting)
 
-scala-lang.scala (Scala)
+golang.go (Go, syntax highlighting, auto suggestions, auto formatting and more)
+
+justusadam.language-haskell (Haskell, syntax highlighting)
+
+ms-python.python (Python, syntax highlighting)
+
+scala-lang.scala (Scala, syntax highlighting)
 
 <br />Prepared by KidProf
