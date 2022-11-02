@@ -180,5 +180,3 @@ justusadam.language-haskell (Haskell, syntax highlighting)
 ms-python.python (Python, syntax highlighting)
 
 scala-lang.scala (Scala, syntax highlighting)
-
-<br />Prepared by KidProf
